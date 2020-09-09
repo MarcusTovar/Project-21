@@ -13,10 +13,10 @@ bullet = createSprite(75, 20, 50, 50);
 wall = createSprite(1200,200,thickness,height/2);
 wall.shapeColor = color(80,80,80)
 
-car.velocityX = speed;
+bullet.velocityX = speed;
 }
 
-function draw() {
+function draw(){
   background(255,255,255); 
   if(hasCollided(bullet,wall)){
      bullet.velocityX=0;
@@ -36,12 +36,14 @@ function draw() {
   drawSprites();
 }
 }
-function hasCollided(bullet,wall)
+function hasCollided(bullet,wall){
 
+  bulletRightEdge = bullet.x + bullet.width;{wallLeftEdge = wall.x;
+  wallLeftEdge + wall.x;
 
-bulletRightEdge + bullet.x + bullet.width;{
-wallLeftEdge + wall.x;
-if (bulletRightEdge + wallLeftEdge){
+}
+
+if (bulletRightEdge >= wallLeftEdge){
 
 return true;
 
